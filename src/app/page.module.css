@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+.container {
+  width: 100%;
+  max-width: 1270px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: 100px;
+}
+
+.section__numbers {
+  background-color: var(--bg-light-color);
+}
+
+.numbers__items {
+  padding: 40px 0;
+  display: flex;
+  margin: 0 auto;
+
+  max-width: 816px;
+}
+
+.numbers__item {
+  flex: 1 1 0;
+  text-align: center;
+}
+
+.numbers__number {
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.numbers__text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--card-color-text);
+}
+
+/* who */
+
+.why__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 62px;
+
+  margin-bottom: 56px;
+}
+
+.section__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 62px;
+
+  margin-bottom: 56px;
+}
+
+.why__items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.why__item {
+  padding: 24px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border-right: 2px solid var(--gray);
+  border-left: 2px solid var(--gray);
+}
+
+.why__item img {
+  max-width: 82px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.why__item p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  color: var(--card-color-text);
+}
+
+/* categories  */
+
+
+
+.categories__item {
+  padding: 40px;
+}
+
+
+
+.categories__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.categories__item {
+  background-color: #f9f9f9;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+
+  position: relative;
+}
+
+.categories__item_pic {
+  display: flex;
+  text-align: left;
+}
+
+.image__wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.categories__item__goover {
+  position: absolute; /* Добавлено абсолютное позиционирование */
+  left: 40px;
+  bottom: 40px;
+  border-radius: 8px;
+}
+
+.categories__item__goover p {
+  font-size: 22px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.categories__item__goover button {
+  padding: 12px 76px;
+  background: none;
+  color: var(--text-black);
+  border: 1px solid var(--gray-border);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.categories__item__goover button:hover {
+  background-color: var(--gray-button-hover);
+}
+
+.categories__footer{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+
+
+@media (max-width: 375px) {
+  .numbers__items{
+    flex-wrap: wrap;
+
+  }
+ 
+  
+  .numbers__item:nth-child(1) {
+    margin-bottom: 24px;
+  }
+  .numbers__item:nth-child(1) {
+    margin-bottom: 24px;
+  }
+  .numbers__text {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .numbers__items {
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    max-width: 816px;
+    margin: 0 auto;
+  }
+  
+  .numbers__item {
+    flex: 1 1 calc(50% - 20px); /* Высчитываем ширину для двух элементов на строке с учетом отступов */
+    text-align: center;
+    margin-bottom: 20px; /* Отступ между элементами */
+  }
+
+  .why__items{
+    flex-direction: column;
+  }
+  .why__item {
+    border-right: none;
+    border-left: none;
+
+    border-top: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
+    margin-bottom: 30px;
+  }
+  .why__item:last-child {
+    margin-bottom: 0px;
+  }
+  .categories__item button{
+    display: none;
+  }
+
+  .categories__item_pic img{
+    max-width: 100%; /* Максимальная ширина изображения будет равна ширине родительского контейнера */
+    height: auto; /* Автоматический расчёт высоты, сохраняя пропорции изображения */
+    display: block; 
+    
+  }
+  .categories__item {
+    padding: 0px;
+  }
+  .categories__items {
+    gap: 20px;
+  }
+
+  .categories__item {
+     background-color: transparent; 
+    overflow:auto ; 
+   display: block;
+   flex-direction: initial;
+   align-items: initial;
+   justify-content: initial;
+   position: relative;
+}
+
+.categories__item__goover {
+    position: relative; 
+   left: 0;
+   bottom: 0;
+     border-radius: 0;
+}
+.categories__item__goover p {
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 400;
+}
+.categories__footer {
+  margin-top: 24px;
+}
+.section {
+  margin-bottom: 40px;
+}
+}

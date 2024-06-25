@@ -1,0 +1,134 @@
+.wrapper {
+  width: 100%;
+  max-width: 1270px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.navigation {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.navigationList {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.navigationList li {
+  display: flex;
+  align-items: center;
+}
+
+.navigationList li + li::before {
+  content: "/";
+  margin: 0 10px;
+  color: #000;
+}
+
+.navigationList li:last-child a {
+  opacity: 0.7;
+}
+
+.infoSection {
+  display: grid;
+  grid-template-columns: 51.273% 48.727%;
+  padding: 30px;
+  margin-bottom: 100px;
+}
+
+.mediaContainer {
+  position: relative;
+  flex: 1;
+}
+
+.overlayImages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.overlayImage1,
+.overlayImage2 {
+  position: absolute;
+  z-index: 2;
+}
+
+.overlayImage1 {
+  bottom: -30px;
+  right: -30px;
+}
+
+.overlayImage2 {
+  top: -30px;
+  left: -30px;
+}
+
+.mediaWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 70%;
+  z-index: 3;
+}
+
+.mediaFrame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.textContent {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 100%;
+}
+
+.textContent h2 {
+  font-weight: 400;
+  font-size: 18px;
+  color: rgba(66, 149, 228, 1);
+  border-bottom: 1px solid rgba(66, 149, 228, 1);
+  display: inline-block;
+}
+
+.brandBlock {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.brandName {
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 62px;
+}
+
+.brandTitle {
+  font-size: 44px;
+  font-weight: bold;
+  color: rgba(66, 149, 228, 1);
+  display: inline-block;
+  margin-left: 17px;
+}
+
+.brandTitle span {
+  background-color: rgba(173, 215, 255, 0.2);
+  line-height: 62px;
+  padding-right: 10px;
+}
+
+.textDescription {
+  line-height: 1.6;
+}
+

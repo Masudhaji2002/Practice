@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+.section {
+  margin-bottom: 100px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1270px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* popular */
+.popularTop {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px;
+}
+
+.popularTitle {
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 62px;
+}
+
+.popularButton {
+  display: flex;
+  align-items: center;
+}
+
+.sliderButton {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.sliderButtonNext {
+  margin-left: 40px;
+}
+
+.sliderButtonPrev img {
+  transform: rotate(180deg);
+}
+
+.sliderButton.active {
+  opacity: 1;
+}
+
+.popularItems {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.popularItem {
+  background-color: #ffffff;
+  position: relative;
+}
+
+.popularItemHeader {
+  position: relative;
+}
+
+.popularItemPic {
+  position: relative;
+  display: flex;
+}
+
+.popularItemTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 17px 12px;
+}
+
+.popularItemHave {
+  display: flex;
+  align-items: center;
+}
+
+.popularItemHave p {
+  margin-left: 8px;
+}
+
+.popularItemFree span {
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.popularItemGif {
+  padding: 6px 8px 6px 30px;
+  background-color: white;
+  align-items: center;
+  display: inline-flex;
+  margin-top: 8px;
+}
+
+.popularItemTextGif {
+  background-color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.25;
+  position: relative;
+}
+
+.popularItemTextGif:after {
+  content: "";
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  left: -22px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url("/gift1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.popularItemSale {
+  position: absolute;
+  top: 17px;
+  right: 12px;
+  background-color: white;
+  color: #000000;
+  padding: 6px 12px;
+}
+
+.popularItemBottom {
+  padding: 10px 12px;
+  border-left: 1px solid var(--gray);
+  border-right: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+}
+
+.popularItemBottomText {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--gray-color);
+}
+
+.bottomBuyPrice {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.bottomNewPrice {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.bottomOldPrice {
+  position: relative;
+  margin-left: 12px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.bottomOldPrice::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 55%;
+  height: 0.8px;
+  background-color: rgb(0, 0, 0);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 375px) {
+  .popularTitle {
+    font-size: 22px;
+  }
+  .popularButton {
+    display: none;
+  }
+  .popularTop {
+    margin-bottom: 24px;
+  }
+
+  .popularSlider {
+    overflow-x: scroll; /* Изменяем на прокрутку с возможностью видеть скроллбар */
+    scrollbar-width: none; /* Скрываем стандартные скроллбары */
+    -ms-overflow-style: none; /* Для IE и Edge */
+  }
+
+  .popularItems {
+    display: flex; /* Используем flex для расположения элементов */
+    flex-wrap: nowrap; /* Запрещаем перенос элементов на новую строку */
+    gap: 30px; /* Отступ между элементами */
+    padding-bottom: 20px; /* Добавляем отступ вниз для скроллбара */
+    margin: 0 -10px; /* Устанавливаем отрицательный отступ справа и слева */
+  }
+
+  .popularItem {
+    flex: 0 0 auto; /* Фиксируем ширину элемента */
+    width: calc(80% - 20px); /* Ширина элемента на маленьких экранах */
+    margin: 0 10px; /* Отступ между элементами */
+  }
+
+  .popularSlider::-webkit-scrollbar {
+    display: none; /* Скрываем скроллбары в Chrome, Safari и Opera */
+  }
+  .container {
+    padding: 0px 0px 0px 15px;
+  }
+  .section {
+    margin-bottom: 40px;
+  }
+
+}
